@@ -1,8 +1,7 @@
-import './App.css';
 
 function App() {
   return (
-    <>Sup</>
+    <>Jebac cie Marcel</>
   );
 }
 
