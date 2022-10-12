@@ -13,7 +13,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-const drawerWidth = 240;
 const navItems = ["zakladka1111", "zakladka2<3", "chuj"];
 
 const Navbar = (props) => {
@@ -75,6 +74,7 @@ const Navbar = (props) => {
       <Box component="nav">
         <Drawer
           container={container}
+          anchor="top"
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -85,7 +85,6 @@ const Navbar = (props) => {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
             },
           }}
         >
