@@ -1,7 +1,8 @@
+import Layout from './components/Layout'
 
 function App() {
   return (
-    <>Jebac cie Marcel</>
+    <Layout/>
   );
 }
 
