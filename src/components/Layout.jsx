@@ -6,7 +6,7 @@ import Profile from "./Profile";
 const Layout = () => {
   return (
     <>
-      <OfferCard />
+      <Profile />
     </>
   );
 };
