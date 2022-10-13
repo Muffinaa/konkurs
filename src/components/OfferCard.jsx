@@ -10,7 +10,7 @@ export const OfferCard = () => {
       <Typography>Hello</Typography>
       <IconButton
         onClick={() => setFavorite(favorite ? false : true)}
-        color="primary"
+        color="secondary"
         aria-label="Save"
         component="label"
       >
