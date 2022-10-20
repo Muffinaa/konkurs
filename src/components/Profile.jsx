@@ -16,10 +16,31 @@ const Profile = () => {
           boxShadow: '3px 2px 9px grey'
         }}
     >
-      <TextField
-        sx={{left:'5%' , top:'5%'}}
-       id="outlined-basic" label="Name" variant="outlined" />
+      <Typography
+        variant='h5'
+        sx={{position:'absolute', left:'7%', top:'3%'}}
+      >
+        Profile Settings
 
+      </Typography>
+
+      
+
+      <TextField
+        sx={{left:'5%' , top:'10%', position:'absolute'}}
+        disabled
+          id="filled-disabled"
+          label="Name"
+          defaultValue="Name"
+          variant="filled" />
+
+      <TextField
+        sx={{left:'5%' , top:'22%' , position:'absolute'}}
+        disabled
+          id="filled-disabled"
+          label="Surname"
+          defaultValue="Surname"
+          variant="filled" />
 
     </Box>
     <Box 
@@ -28,7 +49,7 @@ const Profile = () => {
              > 
             
       <Box
-      sx = {{borderBottom:'5px solid black', width:'100%', height:150, left:0,top:0, position:"absolute",
+      sx = {{ width:'100%', height:150, left:0,top:0, position:"absolute",
       bgcolor: 'primary.main' 
       }}
       
@@ -38,7 +59,7 @@ const Profile = () => {
       </Box>
       
         <Stack direction="row"
-          sx={{ position:'absolute', left:'36%', top:'12%', border:'4px solid black', borderRadius:40
+          sx={{ position:'absolute', left:'38%', top:'12%', borderRadius:40
             
           }}
         >
@@ -50,7 +71,7 @@ const Profile = () => {
         </Stack>
         <Typography
           variant="h5"
-          sx={{ position:"absolute", top:'29%', left:'29%', opacity:'80%' }}
+          sx={{ position:"absolute", top:'29%', left:'30%', opacity:'80%' }}
         >
             Name Surname
           </Typography>
@@ -58,7 +79,7 @@ const Profile = () => {
         <Typography
 
           variant="h7"
-          sx={{position:"absolute", top:'36%', left:'43%', opacity:'70%'}}
+          sx={{position:"absolute", top:'36%', left:'44%', opacity:'70%'}}
         >
           E-mail
 
@@ -68,7 +89,7 @@ const Profile = () => {
         <Typography
 
           variant="h7"
-          sx={{position:"absolute", top:'41%', left:'43%', opacity:'70%'}}
+          sx={{position:"absolute", top:'41%', left:'44%', opacity:'70%'}}
         >
           Phone
 
