@@ -3,20 +3,33 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
+import TextField from '@mui/material/TextField';
+
 const Profile = () => {
   return (
   <Box
-    sx={{bgcolor:"#0d47a1"}}
-  
+    sx={{ width:"100%", height:"100%", bgColor:"#0d47a1"}}
+    
   >
+    <Box
+    sx={{ height:710,width:900,  left:'6%' , top:'15%', position:'absolute',
+          boxShadow: '3px 2px 9px grey'
+        }}
+    >
+      <TextField
+        sx={{left:'5%' , top:'5%'}}
+       id="outlined-basic" label="Name" variant="outlined" />
+
+
+    </Box>
     <Box 
-      sx = {{border:'2px dashed black', width:300, height:600 , position:'absolute' ,  left:'67%' , top:'15%',
-             padding:'55px', borderRadius: '0% 0% 0% 0%'
-            }} > 
+      sx = {{ width:300, height:600 , position:'absolute' ,  left:'70%' , top:'15%',
+             padding:'55px', borderRadius: '0% 0% 0% 0%', boxShadow: '3px 2px 9px grey',}} 
+             > 
             
       <Box
       sx = {{borderBottom:'5px solid black', width:'100%', height:150, left:0,top:0, position:"absolute",
-      bgcolor: 'primary.main'
+      bgcolor: 'primary.main' 
       }}
       
       >
