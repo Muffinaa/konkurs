@@ -13,6 +13,7 @@ import {
 import { Favorite, FavoriteBorder, Share, School } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
 
+
 export const OfferCard = () => {
   const [favorite, setFavorite] = react.useState(false);
 
@@ -28,7 +29,7 @@ export const OfferCard = () => {
           Nazwa lokalu
         </Typography>
         <Typography gutterBottom variant="body2" color="text.secondary">
-          Wielun • ul. 19 Cwela
+          Wielun • ul. 19 kowala
         </Typography>
         <Chip
           icon={<School />}

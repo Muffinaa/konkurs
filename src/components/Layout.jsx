@@ -1,15 +1,21 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { OfferCard } from "./OfferCard";
-import Profile from "./Profile";
+import CardGrid from "./CardGrid";
+import Sidebar from "./Sidebar";
+import Stack from "@mui/material/Stack"
+import PostButton from "./PostButton";
 
 const Layout = () => {
   return (
     <>
-      <Profile />
-      <Navbar/>
+      <Navbar />
+      <Stack direction="row" spacing={2} justifyContent="Space-between">
+        <Sidebar />
+        <CardGrid />
+      </Stack>
+      <PostButton />
     </>
   );
 };
 
-export default Layout;
+export default Layout
