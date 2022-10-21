@@ -5,6 +5,8 @@ import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Switch from '@mui/material/Switch';
+
 
 const Profile = () => {
   return (
@@ -55,23 +57,51 @@ const Profile = () => {
       </Stack>  
       </Box> 
       
+      <Stack
+        spacing={4}
+        sx={{left:'5%' , top:'13%', position:"absolute"}}
+      >
+        <TextField
+         sx={{ }}
+           disabled
+           id="filled-disabled"
+           label="Name"
+           defaultValue="Name"
+            variant="filled" />
 
+       <TextField
+         sx={{ }}
+          disabled
+           id="filled-disabled"
+           label="Surname"
+           defaultValue="Surname"
+           variant="filled" 
+           />
+           
+
+        <TextField
+          id="filled-search"
+          label="Age"
+          defaultValue="Age"
+          type="search"
+          variant="filled"
+        />
+      
       <TextField
-        sx={{left:'5%' , top:'10%', position:'absolute'}}
-        disabled
-          id="filled-disabled"
-          label="Name"
-          defaultValue="Name"
-          variant="filled" />
+          id="filled-search"
+          label="Gender"
+          defaultValue="Male/Female"
+          type="search"
+          variant="filled"
+        />
+        
+      </Stack>
+        
+      <Stack>
 
-      <TextField
-        sx={{left:'5%' , top:'22%' , position:'absolute'}}
-        disabled
-          id="filled-disabled"
-          label="Surname"
-          defaultValue="Surname"
-          variant="filled" />
 
+
+      </Stack>
     </Box>
     <Box 
       sx = {{ width:300, height:600 , position:'absolute' ,  left:'70%' , top:'15%',
