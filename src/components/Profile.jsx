@@ -4,6 +4,7 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const Profile = () => {
   return (
@@ -15,15 +16,44 @@ const Profile = () => {
     sx={{ height:710,width:900,  left:'6%' , top:'15%', position:'absolute',
           boxShadow: '3px 2px 9px grey'
         }}
-    >
-      <Typography
+    > 
+      <Box
+        sx={{bgcolor:'primary.main',width:'100%', height:55, position:"absolute"}}
+
+      >
+       <Typography
         variant='h5'
-        sx={{position:'absolute', left:'7%', top:'3%'}}
+        sx={{position:'absolute', left:'7%', top:'21%', color:"white" }}
       >
         Profile Settings
 
       </Typography>
+      <Stack
+        spacing={2}
+        direction="row"
+        sx={{position:'absolute',float:"right", color:"white", top:'15%', right:"4%" }}
+      >
+        <Button 
+          variant="contained"
+          >
+          Layout 
+        </Button>
+        <Button 
+          variant="contained"
+          
 
+          >
+          Privacy  
+        </Button>
+        <Button 
+          variant="contained"
+          
+
+          >
+          Achivments
+        </Button>
+      </Stack>  
+      </Box> 
       
 
       <TextField
