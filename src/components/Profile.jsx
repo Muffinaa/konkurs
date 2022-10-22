@@ -2,10 +2,14 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { Typography } from "@mui/material";
+import { FormControl, Icon, Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+
+const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 
 const Profile = () => {
@@ -86,6 +90,7 @@ const Profile = () => {
           type="search"
           variant="filled"
         />
+
       
       <TextField
           id="filled-search"
@@ -94,9 +99,38 @@ const Profile = () => {
           type="search"
           variant="filled"
         />
+
+      <TextField
+         sx={{ }}
+           id="filled-disabled"
+           label="Job"
+           defaultValue="Job"
+            variant="filled" />
         
       </Stack>
+      <FormControl
+        spacing={4}
+        sx={{left:'30%' , top:'14%', position:"absolute" }}
+      >
+        <Switch
         
+        {...label} 
+        
+        />
+
+        <Switch
+        
+        {...label} 
+        
+        />
+
+        <Switch
+        
+        {...label} 
+        
+        />
+        
+      </FormControl>
       <Stack>
 
 
