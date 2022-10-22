@@ -1,38 +1,43 @@
-<<<<<<< HEAD
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { FormControl, Icon, Typography } from "@mui/material";
-=======
-import react from "react";
-import { Card, Typography } from "@mui/material";
-import Box from '@mui/material/Box';
->>>>>>> fc72c4d2736216781cde5171a9c0ab650235d94e
+import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Button from '@mui/material/Button';
-<<<<<<< HEAD
 import Switch from '@mui/material/Switch';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
-=======
->>>>>>> fc72c4d2736216781cde5171a9c0ab650235d94e
 
 
-export const Login = () => {
-
-
+const Profile = () => {
   return (
-    <Card sx={{ width: "350px", height: '450px', padding: "20px", backgroundColor: 'white', boxShadow: '3px 2px 9px lightblue',
-    margin: '4em', padding: '3em', }}>
-      <AccountCircleIcon color="primary" sx={{fontSize: '60px', marginLeft: '145px' }} />
-      <Typography 
-            sx={{ flexGrow: 3, fontSize: 30, textAlign: 'center', display: { xs: "none", sm: "block" } }}
+  <Box
+    sx={{ width:"100%", height:"100%", bgColor:"#0d47a1"}}
+    
+  >
+    <Box
+    sx={{ height:710,width:900,  left:'6%' , top:'15%', position:'absolute',
+          boxShadow: '3px 2px 9px grey'
+        }}
+    > 
+      <Box
+        sx={{bgcolor:'primary.main',width:'100%', height:55, position:"absolute"}}
+
+      >
+       <Typography
+        variant='h5'
+        sx={{position:'absolute', left:'7%', top:'21%', color:"white" }}
+      >
+        Profile Settings
+
+      </Typography>
+      <Stack
+        spacing={2}
+        direction="row"
+        sx={{position:'absolute',float:"right", color:"white", top:'15%', right:"4%" }}
+      >
+        <Button 
+          variant="contained"
           >
-<<<<<<< HEAD
           Layout 
         </Button>
         <Button 
@@ -81,7 +86,6 @@ export const Login = () => {
           type="search"
           variant="filled"
         />
-
       
       <TextField
           id="filled-search"
@@ -90,38 +94,9 @@ export const Login = () => {
           type="search"
           variant="filled"
         />
-
-      <TextField
-         sx={{ }}
-           id="filled-disabled"
-           label="Job"
-           defaultValue="Job"
-            variant="filled" />
         
       </Stack>
-      <FormControl
-        spacing={4}
-        sx={{left:'30%' , top:'14%', position:"absolute" }}
-      >
-        <Switch
         
-        {...label} 
-        
-        />
-
-        <Switch
-        
-        {...label} 
-        
-        />
-
-        <Switch
-        
-        {...label} 
-        
-        />
-        
-      </FormControl>
       <Stack>
 
 
@@ -159,28 +134,32 @@ export const Login = () => {
           sx={{ position:"absolute", top:'29%', left:'30%', opacity:'80%' }}
         >
             Name Surname
-=======
-            Logowanie
->>>>>>> fc72c4d2736216781cde5171a9c0ab650235d94e
           </Typography>
-          <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch', marginLeft: '65px' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="First name" variant="outlined" />
-      <TextField id="outlined-basic1" label="Last name" variant="outlined" />
-      <TextField id="outlined-basic2" label="Email" variant="outlined" />
-      <TextField id="outlined-basic3" label="Password" variant="outlined" />
+
+        <Typography
+
+          variant="h7"
+          sx={{position:"absolute", top:'36%', left:'44%', opacity:'70%'}}
+        >
+          E-mail
+
+          
+        </Typography>
+
+        <Typography
+
+          variant="h7"
+          sx={{position:"absolute", top:'41%', left:'44%', opacity:'70%'}}
+        >
+          Phone
+
+          
+        </Typography>
+      
+    
     </Box>
-    <Button variant="contained" size="large" sx={{ marginLeft: '125px' }}>
-          Login
-        </Button>
-    </Card>
+  </Box>
   );
 };
 
-export default Login;
+export default Profile;
