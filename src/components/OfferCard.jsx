@@ -14,11 +14,11 @@ import { Favorite, FavoriteBorder, Share, School } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
 
 
-export const OfferCard = () => {
+export const OfferCard = (props) => {
   const [favorite, setFavorite] = react.useState(false);
 
   return (
-    <Card sx={{ width: "350px" }}>
+    <Card sx={{ width: 400 }}>
       <CardMedia
         component="img"
         height="140"
@@ -26,10 +26,10 @@ export const OfferCard = () => {
       />
       <CardContent>
         <Typography variant="h5" component="div">
-          Nazwa lokalu
+          {props.title}
         </Typography>
         <Typography gutterBottom variant="body2" color="text.secondary">
-          Wielun • ul. 19 kowala
+          {props.location}
         </Typography>
         <Chip
           icon={<School />}
