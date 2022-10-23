@@ -20,14 +20,41 @@ app.post('/Register', (req,res)=> {
 
     db.query(
         "INSERT INTO users (FirstName,LastName,email,password) Values(?,?,?,?)", 
-    [FirstName,LastName,email,password],
+    [FirstName, LastName, email,password],
     (err,result) => {
         console.log(err);
         }
+        
+    
     );
 });
 
+app.post('/Login'), (req,res) => {
 
+    const email = req.body.email 
+    const password = req.body.password
+
+    db.query(
+
+        "SELECT * FROM users WHERE email = ? AND password  = ?", 
+    [email,password],
+    (err,result) => {
+
+        if (err) {
+            res.send({err: err});
+            }
+            
+        if (result) {
+            res.send(result)
+            } 
+            else {
+                res.send({message:'Wrong E-mail or Password try again '})
+            }
+    
+
+        }
+    );
+}
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);

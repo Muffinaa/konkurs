@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
+import { List } from "@mui/icons-material";
 
 
 const Profile = () => {
@@ -129,6 +130,7 @@ const Profile = () => {
 
           ></Avatar>
         </Stack>
+      
         <Typography
           variant="h5"
           sx={{ position:"absolute", top:'29%', left:'30%', opacity:'80%' }}

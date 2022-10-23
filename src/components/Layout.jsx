@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack"
 import PostButton from "./PostButton";
 import Profile from "./Profile";
 import Register from "./Register"
+import Login from "./Login"
 const Layout = () => {
   return (
     <>
@@ -13,7 +14,7 @@ const Layout = () => {
       <Stack direction="row" spacing={2} justifyContent="Space-between">
         <Sidebar />
       </Stack>
-      <Register />
+      <Login/>
       <PostButton />
     </>
   );
