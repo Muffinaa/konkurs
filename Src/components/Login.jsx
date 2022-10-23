@@ -14,22 +14,36 @@ export const Login = () => {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
+  const [loginStatus, setLoginStauts] = useState("");
+
   const login = () => {
-    Axios.post('http://localhost:3001/Login' , {
-      
-    email: Email,
-    password: Password
     
+    Axios.post('http://localhost:3001/Login' , {  
+        email: Email,
+        password: Password,
+      }).then((response) => {
+
+            if(response.data.message){
+                setLoginStauts(response.data.message)
+
+            } else {
+                setLoginStauts(response.data[0].email)
+            }
+
+          console.log(response.data);
+      });
+    };
   
-  }).then((response) => {
-      console.log(response);
-  });
-  };
+     
+      
+      
+        
+
 
 
   return (
     <Card sx={{ width: "350px", height: '532px', padding: "20px",  backgroundColor: 'white', boxShadow: '3px 2px 9px lightblue',
-    margin: '4em', padding: '3em', }}>
+    margin: '4em', padding: '3em', left:"50%" }}>
       <AccountCircleIcon color="primary" sx={{fontSize: '60px', marginLeft: '145px' }} />
       <Typography 
             sx={{ flexGrow: 3, fontSize: 30, textAlign: 'center', display: { xs: "none", sm: "block" } }}
@@ -54,8 +68,19 @@ export const Login = () => {
     >
           Log in 
         </Button>
+
+        <Box 
+            variant='h4'
+            
+        >
+            {loginStatus}
+        </Box>
     </Card>
+
+    
+    
   );
+
 };
 
-export default Login;
+export default Login; 

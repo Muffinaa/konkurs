@@ -10,6 +10,7 @@ import Axios from 'axios'
 
 
 export const Register = () => {
+  
   const [FnameReg, setFirstnameReg] = useState("");
   const [LnameReg, setLastnameReg] = useState("");
   const [EmailReg, setEmailReg] = useState("");

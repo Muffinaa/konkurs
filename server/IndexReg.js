@@ -29,32 +29,29 @@ app.post('/Register', (req,res)=> {
     );
 });
 
-app.post('/Login'), (req,res) => {
+app.post('/Login', (req,res) => {
 
     const email = req.body.email 
     const password = req.body.password
 
     db.query(
-
-        "SELECT * FROM users WHERE email = ? AND password  = ?", 
+        "SELECT * FROM users WHERE email = ? AND password = ?", 
     [email,password],
     (err,result) => {
+        if(err) {
 
-        if (err) {
-            res.send({err: err});
-            }
-            
-        if (result) {
-            res.send(result)
-            } 
-            else {
-                res.send({message:'Wrong E-mail or Password try again '})
-            }
-    
+            res.send({err:err});
 
         }
+
+        if (result.length > 0) {
+            res.send(result);
+        } else {
+            res.send({ message:"Wrong email or password try again "});
+        }
+      }
     );
-}
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
