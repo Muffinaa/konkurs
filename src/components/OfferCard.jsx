@@ -1,7 +1,6 @@
 import react from "react";
 import {
   Button,
-  Chip,
   Card,
   Typography,
   IconButton,
@@ -10,7 +9,7 @@ import {
   CardContent,
   CardActions,
 } from "@mui/material";
-import { Favorite, FavoriteBorder, Share, School } from "@mui/icons-material";
+import { Favorite, FavoriteBorder, Share } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
 
 
@@ -31,12 +30,7 @@ export const OfferCard = (props) => {
         <Typography gutterBottom variant="body2" color="text.secondary">
           {props.location}
         </Typography>
-        <Chip
-          icon={<School />}
-          label="Szkoła"
-          size="small"
-          variant="outlined"
-        />
+       
       </CardContent>
       <CardActions disableSpacing>
         <Tooltip title="Udostępnij">
