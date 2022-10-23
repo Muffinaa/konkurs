@@ -69,7 +69,7 @@ const Navbar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            Placeholder
+            Your City
           </Typography>
           <Search>
             <SearchIconWrapper>
