@@ -3,8 +3,8 @@ import { Box, List, ListItem, ListItemText } from "@mui/material";
 
 const Sidebar = () => {
   const filters = [
-    'Chuj',
-    'chuj2'
+    'filter1',
+    'filter2'
   ];
 
   return (
