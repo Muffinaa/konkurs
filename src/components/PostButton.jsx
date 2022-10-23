@@ -25,7 +25,7 @@ export default function PostButton() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box sx={{ position: "absolute", bottom: 10, right: 10 }}>
+    <Box sx={{ position: "fixed", bottom: 10, right: 10 }}>
       <Fab onClick={handleOpen} color="primary" aria-label="add">
         <AddIcon />
       </Fab>
